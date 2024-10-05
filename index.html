@@ -1,0 +1,327 @@
+<audio autoplay loop preload="auto" id="backgroundMusic">
+    <source src="./Happy_birthday.mp3" type="audio/mpeg" />
+    <source src="./Happy_birthday.mp3" type="audio/ogg">
+    Tu navegador no soporta la reproducción de audio.
+  </audio>
+<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      background-image: url(https://media.giphy.com/media/120ErahsQyf1q8/giphy.gif);
+      font-family: "Press Start 2P", cursive;
+      animation: backgroundColorChange 5s infinite;
+    }
+    @keyframes backgroundColorChange {
+      0% {
+        background-color: #0d0d3d;
+      } /* Azul oscuro */
+      25% {
+        background-color: #4b0082;
+      } /* Índigo */
+      50% {
+        background-color: #8b0000;
+      } /* Rojo oscuro */
+      75% {
+        background-color: #800080;
+      } /* Púrpura */
+      100% {
+        background-color: #321450;
+      } /* Violeta oscuro */
+    }
+    /* entire container, keeps perspective */
+    .flip-container {
+      perspective: 200em;
+      margin-top: 5em;
+      margin-bottom: 5em;
+    }
+    /* flip the pane when hovered */
+    .flip-container:hover .flipper,
+    .flip-container.hover .flipper {
+      transform: rotateY(180deg);
+    }
+
+    .flip-container,
+    .front,
+    .back {
+      width: 40em;
+      height: 130em;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* flip speed goes here */
+    .flipper {
+      transition: 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+
+    /* hide back of pane during swap */
+    .front {
+      backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #323232;
+      border: 0.5em solid #1f1f1f;
+      border-left: none;
+      background-image: url(https://lh3.googleusercontent.com/-8kI8JqxOLGg/VTgkNTcfvzI/AAAAAAAAbtU/j0hEj5b4ixE/w1503-h1005/gold+confetti.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+
+    .back {
+      backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #323232;
+      border: 0.5em solid #1f1f1f;
+      border-right: none;
+    }
+
+    .front {
+      z-index: 2;
+      transform: rotateY(0deg);
+    }
+
+    .back {
+      transform: rotateY(180deg);
+    }
+
+    h1 {
+      font-family: "Press Start 2P";
+      font-size: 0.8em;
+      text-align: center;
+      padding-top: 65em;
+      color: #626262;
+      font-weight: lighter;
+    }
+
+    p.letter1,
+    .letter2,
+    .letter3,
+    .letter4,
+    .letter5,
+    .letter6,
+    .letter7,
+    .letter8,
+    .letter9 {
+      font-family: "Press Start 2P";
+      font-size: 6em;
+      line-height: 1em;
+      letter-spacing: 0.3em;
+      text-align: center;
+      color: white;
+      font-weight: lighter;
+      position: absolute;
+    }
+
+    .letter1 {
+      left: 1.5em;
+      top: 2em;
+    }
+
+    .letter2 {
+      left: 3em;
+      top: 2em;
+    }
+
+    .letter3 {
+      left: 4.5em;
+      top: 2em;
+    }
+
+    .letter4 {
+      left: 1.5em;
+      top: 3.5em;
+    }
+
+    .letter5 {
+      left: 3em;
+      top: 3.5em;
+    }
+
+    .letter6 {
+      left: 4.5em;
+      top: 3.5em;
+    }
+
+    .letter7 {
+      left: 1.5em;
+      top: 5em;
+    }
+
+    .letter8 {
+      left: 3em;
+      top: 5em;
+    }
+
+    .letter9 {
+      left: 4.5em;
+      top: 5em;
+    }
+
+    .letter1,
+    .letter2,
+    .letter3,
+    .letter4,
+    .letter5,
+    .letter6,
+    .letter7,
+    .letter8,
+    .letter9 {
+      animation-duration: 2s;
+      animation-name: verGroot;
+      animation-iteration-count: 1;
+      animation-delay: 0.5s;
+      transition-timing-function: ease-in-out;
+      text-shadow: 2px 2px 4px #000000;
+    }
+
+    .kader {
+      background-color: white;
+      background: rgba(255, 255, 255, 0.5);
+      width: 80%;
+      margin: auto;
+      margin-top: 5em;
+      overflow: auto;
+    }
+
+    .baloons {
+      width: 26%;
+      display: block;
+      position: absolute;
+      top: 120em;
+      left: 37%;
+      animation-duration: 2s;
+      animation-name: spin;
+      animation-iteration-count: infinite;
+      transition-timing-function: ease-in-out;
+    }
+
+    h3 {
+      font-family: "Press Start 2P";
+      font-size: 2em;
+      text-align: center;
+      color: white;
+      font-weight: lighter;
+      margin-top: 2em;
+      margin-bottom: 2em;
+      text-transform: uppercase;
+    }
+
+    h3:hover {
+      color: gold;
+      transform: scale(1.15);
+    }
+
+    p.wens {
+      font-family: "Press Start 2P", cursive;
+      font-size: 1em;
+      text-align: center;
+      color: #1f1f1f;
+      font-weight: lighter;
+      width: 80%;
+      margin: auto;
+      line-height: 2em;
+      margin-bottom: 2em;
+    }
+
+    @keyframes verGroot {
+      0% {
+        transform: scale(0.1);
+      }
+      25% {
+        transform: scale(2);
+      }
+      50% {
+        transform: scale(0.5);
+      }
+      75% {
+        transform: scale(2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(720deg);
+      }
+    }
+  </style>
+  <div class="flipper">
+    <div class="front">
+      <p class="letter1">H</p>
+      <p class="letter2">A</p>
+      <p class="letter3">P</p>
+      <p class="letter4">P</p>
+      <p class="letter5">Y</p>
+      <p class="letter6">B</p>
+      <p class="letter7">D</p>
+      <p class="letter8">A</p>
+      <p class="letter9">Y</p>
+
+      <h1>© Casier Celebration Cards</h1>
+    </div>
+    <div class="back">
+      <img
+        class="baloons"
+        src="https://s-media-cache-ak0.pinimg.com/originals/d9/c1/f5/d9c1f506f588badeb353889ae4f36329.png"
+      />
+      <div class="kader" style="overflow-y: auto">
+        <h3>🎉 ¡Feliz Cumpleaños, Natalia! 🎂</h3>
+        <p class="wens">
+          Querida Natalia, Hoy es un día tan especial como tú. Hace 20 años, el
+          mundo se volvió un lugar mejor cuando llegaste a él. Tu alegría, tu
+          sonrisa y tu increíble energía iluminan la vida de quienes tenemos la
+          suerte de conocerte. Quiero aprovechar este día para recordarte lo
+          maravillosa que eres y lo agradecido/a que estoy de tenerte en mi
+          vida. Eres esa persona especial que siempre encuentra la manera de
+          hacer que cualquier día ordinario se vuelva extraordinario, y que hace
+          que todo sea más brillante con solo estar cerca. Espero que este año
+          esté lleno de sueños cumplidos, aventuras inolvidables y mucho amor,
+          porque no mereces menos. Que cada día de esta nueva vuelta al sol sea
+          tan increíble como tú, y que siempre encuentres motivos para sonreír y
+          ser feliz. Gracias por ser tú, por ser auténtica, por estar siempre
+          ahí, y por ser una amiga tan especial. No importa dónde estemos o
+          cuánto tiempo pase, siempre tendrás un lugar muy grande en mi corazón.
+          ¡Feliz cumpleaños, Nati! Que hoy y siempre, la vida te dé razones para
+          celebrar. 🎈💖✨ Con todo mi cariño,<br /><br />Juan Varon
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  window.addEventListener('load', function() {
+      var audio = document.getElementById('backgroundMusic');
+      // Intentar reproducir automáticamente cuando la página carga
+      audio.play().catch(function() {
+          // Si la reproducción automática es bloqueada, esperamos cualquier interacción del usuario
+          console.log('La reproducción automática fue bloqueada, esperando interacción del usuario...');
+          document.body.addEventListener('click', playAudioOnInteraction);
+          document.body.addEventListener('scroll', playAudioOnInteraction);
+      });
+  });
+
+  function playAudioOnInteraction() {
+      var audio = document.getElementById('backgroundMusic');
+      audio.play().then(function() {
+          // Una vez que se empieza a reproducir, se remueven los listeners para evitar ejecuciones repetidas
+          document.body.removeEventListener('click', playAudioOnInteraction);
+          document.body.removeEventListener('scroll', playAudioOnInteraction);
+          console.log('Música de fondo reproduciéndose después de la interacción del usuario.');
+      }).catch(function(error) {
+          console.log('Error al reproducir el audio:', error);
+      });
+  }
+</script>
